@@ -1,0 +1,57 @@
+.fontsize-p {
+    font-size: medium;
+}
+
+.img-md {
+    width: 60px;
+    height: 60px;
+}
+
+.btn-tm {
+    position: relative;
+    vertical-align: middle;
+}
+
+.border-1 {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.form-group-border {
+    border: 1px solid #f3f3f3;
+    padding: 0.56rem 0.75rem;
+    line-height: 14px;
+}
+
+.login-h1 {
+    font-style: italic;
+    font-family: Baloo Bhai;
+}
+
+.login-top {
+    margin-top: 80px;
+}
+
+.border-hidden {
+    border: 0px;
+}
+
+.table-ghostwhite {
+    background-color: #ffffff;
+}
+
+.table-lightgrey {
+    background-color: #d8d8d8;
+}
+
+.p-9 {
+    font-size: 0.95em;
+}
+
+.p-white {
+    color: #ffffff;
+}
+

@@ -1,0 +1,892 @@
+body {
+    background-image: url("img/nen.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: UTM Avo;
+}
+
+
+/* nav */
+
+nav>.container>#navbarNav>ul>li>a {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.ms-6 {
+    margin-left: 4rem !important;
+}
+
+.mb-6 {
+    margin-bottom: 4rem !important;
+}
+
+.p-6 {
+    padding: 3rem 10rem 3rem 10rem !important;
+}
+
+
+/* search */
+
+.searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    /* min-height: 40px; */
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 5px 5px 5px 5px;
+}
+
+.search_input {
+    color: white;
+    padding: 2px 5px;
+    min-width: calc(450px - 50px);
+    caret-color: red;
+    border: 0;
+    outline: 0;
+    background: none;
+}
+
+@media screen and (max-width: 576px) {
+    .search_input {
+        color: white;
+        padding: 2px 5px;
+        min-width: calc(450px - 250px);
+        caret-color: red;
+        border: 0;
+        outline: 0;
+        background: none;
+    }
+}
+
+.search_icon {
+    min-height: 32px;
+    min-width: 32px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: white;
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 350px) {
+    .search_input {
+        color: white;
+        padding: 5px 2px;
+        margin: 0 -55px 0 0;
+        width: 50px;
+        caret-color: red;
+        border: 0;
+        outline: 0;
+        background: none;
+    }
+    .search_icon {
+        min-height: 32px;
+        min-width: 32px;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: white;
+        color: #e74c3c;
+        text-decoration: none;
+    }
+}
+
+
+/* home shoe image */
+
+.shoe-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: .20rem;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.shoe-img:hover {
+    transform: scale(1.12, 1.12);
+    -webkit-transform: scale(1.12, 1.12);
+    -moz-transform: scale(1.12, 1.12);
+    -o-transform: scale(1.12, 1.12);
+    -ms-transform: scale(1.12, 1.12);
+}
+
+.sp {
+    height: auto;
+}
+
+
+/* home */
+
+.home {
+    padding: 80px 80px;
+    margin: 7rem 0 7rem 0;
+}
+
+.home-title {
+    font-weight: bold;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    line-height: 6rem;
+}
+
+.home-p {
+    letter-spacing: 1px;
+    font-size: 15pt;
+}
+
+.home-price {
+    font-size: 2rem;
+}
+
+.home-price-sale {
+    text-decoration: line-through rgb(255, 0, 0);
+    font-size: 12pt;
+    margin: 25px 0 -2px 0;
+}
+
+.home-relative {
+    border: 0.1rem solid black;
+    width: 37%;
+    height: 30rem;
+    position: relative;
+}
+
+.home-absolute {
+    border: 1px solid rgb(34, 34, 34);
+    width: 100%;
+    height: 30rem;
+    position: absolute;
+    top: -25px;
+    left: 30px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 991px) {
+    .home-relative {
+        border: 0.1rem solid black;
+        width: 70%;
+        height: 30rem;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .home-absolute {
+        border: 1px solid rgb(34, 34, 34);
+        width: 100%;
+        height: 30rem;
+        position: absolute;
+        top: -25px;
+        left: 30px;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .home-relative {
+        border: 0.1rem solid black;
+        width: 60%;
+        height: 20rem;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .home-absolute {
+        border: 1px solid rgb(34, 34, 34);
+        width: 100%;
+        height: 20rem;
+        position: absolute;
+        top: -25px;
+        left: 30px;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .home-relative {
+        border: 0.1rem solid black;
+        width: 80%;
+        height: 20rem;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .home-absolute {
+        border: 1px solid rgb(34, 34, 34);
+        width: 100%;
+        height: 20rem;
+        position: absolute;
+        top: -25px;
+        left: 30px;
+        z-index: 1;
+    }
+    .home-title {
+        font-weight: bold;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+        line-height: 5rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .home-relative {
+        border: 0.1rem solid black;
+        width: 95%;
+        height: 15rem;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .home-absolute {
+        border: 1px solid rgb(34, 34, 34);
+        width: 100%;
+        height: 15rem;
+        position: absolute;
+        top: -25px;
+        left: 30px;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .home-relative {
+        border: 0.1rem solid black;
+        width: 100%;
+        height: 10rem;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .home-absolute {
+        border: 1px solid rgb(34, 34, 34);
+        width: 100%;
+        height: 10rem;
+        position: absolute;
+        top: -25px;
+        left: 30px;
+        z-index: 1;
+    }
+    .home-title {
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        line-height: 4rem;
+    }
+}
+
+
+/* home product */
+
+.home-product-relative {
+    width: 80%;
+    height: 20rem;
+    position: relative;
+}
+
+.home-product-absolute {
+    width: 30%;
+    height: 23rem;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all 1s ease;
+}
+
+.home-product-absolute:hover {
+    transform: scale(1.10, 1.10);
+}
+
+.home-pro-img-relative {
+    border: 0.1rem solid black;
+    width: 65%;
+    height: 18rem;
+    position: relative;
+    margin-left: 3.5rem;
+}
+
+.pro-img-absolute {
+    width: 100%;
+    height: 18rem;
+    position: absolute;
+    top: -20px;
+    left: 25px;
+    z-index: 1;
+}
+
+.home-pro-p {
+    font-size: 14pt;
+    font-weight: 100;
+}
+
+.see-more-box {
+    width: 15%;
+    height: 2.5rem;
+    position: relative;
+    border: 0.1rem solid black;
+}
+
+.see-more {
+    width: 100%;
+    height: 2.5rem;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: rgb(34, 34, 34);
+    text-align: center;
+    padding: 4px;
+}
+
+.see-more-box>.see-more>a {
+    color: white;
+    text-decoration: none;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1401px) {
+    .home-product-relative {
+        width: 80%;
+        height: 17.5rem;
+        position: relative;
+    }
+    .home-product-absolute {
+        width: 30%;
+        height: 20rem;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+@media screen and (max-width: 1144px) {
+    .home-product-relative {
+        width: 80%;
+        height: 18rem;
+        position: relative;
+    }
+    .home-product-absolute {
+        width: 40%;
+        height: 20rem;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .product-1 {
+        top: 0;
+        left: 0 !important;
+    }
+    .product-2 {
+        top: 0;
+        left: 43.5% !important;
+    }
+    .product-3 {
+        top: 0;
+        left: 87% !important;
+    }
+    .product-4 {
+        top: 0;
+        left: 21.5% !important;
+    }
+    .product-5 {
+        top: 0;
+        left: 65.2% !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .see-more-box {
+        width: 15%;
+        height: 4rem;
+        position: relative;
+        border: 0.1rem solid black;
+    }
+    .see-more {
+        width: 100%;
+        height: 4rem;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        background-color: rgb(34, 34, 34);
+        text-align: center;
+        padding: 4px;
+    }
+}
+
+@media screen and (max-width: 849px) {
+    .home-product-relative {
+        width: 80%;
+        height: 11rem;
+        position: relative;
+    }
+    .home-product-absolute {
+        width: 40%;
+        height: 15rem;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .product-1 {
+        top: 0;
+        left: 0 !important;
+    }
+    .product-2 {
+        top: 0;
+        left: 43.5% !important;
+    }
+    .product-3 {
+        top: 0;
+        left: 87% !important;
+    }
+    .product-4 {
+        top: 10% !important;
+        left: 21.5% !important;
+    }
+    .product-5 {
+        top: 10% !important;
+        left: 65.2% !important;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .home-product-relative {
+        width: 100%;
+        height: 7.5rem;
+        position: relative;
+    }
+    .home-product-absolute {
+        width: 30%;
+        height: 10rem;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .product-1 {
+        top: 0;
+        left: 0 !important;
+    }
+    .product-2 {
+        top: 0;
+        left: 35% !important;
+    }
+    .product-3 {
+        top: 0;
+        left: 70.5% !important;
+    }
+    .product-4 {
+        top: 10% !important;
+        left: 17.5% !important;
+    }
+    .product-5 {
+        top: 10% !important;
+        left: 53% !important;
+    }
+}
+
+
+/* shoe detail */
+
+.shoe-deatil-box {
+    border: 1px solid black;
+    width: 65%;
+    height: 65px;
+    position: relative;
+}
+
+.shoe-deatil {
+    background-color: black;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 100%;
+    height: 62px;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1210px) {
+    .shoe-deatil-box {
+        border: 1px solid black;
+        width: 65%;
+        height: 8rem;
+        position: relative;
+    }
+    .shoe-deatil {
+        background-color: black;
+        color: white;
+        font-size: 2.5rem;
+        text-align: center;
+        width: 100%;
+        height: 8rem;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 665px) {
+    .shoe-deatil-box {
+        border: 1px solid black;
+        width: 65%;
+        height: 12rem;
+        position: relative;
+    }
+    .shoe-deatil {
+        background-color: black;
+        color: white;
+        font-size: 2.5rem;
+        text-align: center;
+        width: 100%;
+        height: 12rem;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 523px) {
+    .shoe-deatil-box {
+        border: 1px solid black;
+        width: 65%;
+        height: 15rem;
+        position: relative;
+    }
+    .shoe-deatil {
+        background-color: black;
+        color: white;
+        font-size: 2.5rem;
+        text-align: center;
+        width: 100%;
+        height: 15rem;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .shoe-deatil-box {
+        border: 1px solid black;
+        width: 65%;
+        height: 16rem;
+        position: relative;
+    }
+    .shoe-deatil {
+        background-color: black;
+        color: white;
+        font-size: 1.72rem;
+        text-align: center;
+        width: 100%;
+        height: 16rem;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        z-index: 1;
+    }
+}
+
+
+/* product detail */
+
+.custom-img {
+    border-radius: 10%;
+    width: 90%;
+    height: 80%;
+}
+
+.title-h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    text-transform: uppercase;
+    margin-bottom: 3.5rem;
+}
+
+.title-p {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.shoe-product-detial {
+    padding: 80px 80px;
+}
+
+.shoe-star .shoe-title {
+    font-size: 24pt;
+    font-weight: bold;
+    position: relative;
+}
+
+.price {
+    font-size: 2rem;
+}
+
+.price-sale {
+    font-size: 1rem;
+    text-decoration: line-through rgb(228, 9, 9);
+    position: absolute;
+    top: 27%;
+    left: 0;
+}
+
+.prduct-img {
+    background-color: #fff;
+    border: 1px solid black;
+    width: 100%;
+    height: 80%;
+}
+
+.shoe-star .title-box {
+    content: "";
+    height: 4px;
+    width: 410px;
+    background-color: rgb(228, 9, 9);
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+    .shoe-star .title-box {
+        content: "";
+        height: 4px;
+        width: 200px;
+        background-color: rgb(228, 9, 9);
+        margin-top: 2rem;
+    }
+}
+
+.shoe-star p span {
+    color: rgb(243, 236, 25);
+    font-size: 1.45rem;
+}
+
+.pr-bold {
+    font-size: 1.25rem !important;
+    font-weight: bold;
+    color: black !important;
+}
+
+.pr-intro {
+    font-size: 13pt;
+    color: black;
+}
+
+.pr-mau {
+    content: "";
+    height: 25px;
+    width: 25px;
+    margin-left: 1rem;
+}
+
+#shoe-pr-info {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.shoe-detail-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+
+/* product protfolio */
+
+.protfolio-box {
+    background-color: white;
+    width: 70%;
+    border: 1px solid black;
+    padding: 15px 20px 15px 20px;
+    color: rgb(34, 34, 34);
+}
+
+.protfolio-title {
+    font-size: 15pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.protfolio-a {
+    display: block;
+    padding: .25rem;
+    text-decoration: none;
+    transition: color .15s;
+    color: rgb(34, 34, 34);
+}
+
+.protfolio-a:hover {
+    color: black;
+    background-color: rgb(240, 240, 240);
+}
+
+
+/* order */
+
+.order-num {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    -moz-border-radius: 9999em;
+    -webkit-border-radius: 9999em;
+    border-radius: 9999em;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.num-1 {
+    background: black;
+    left: 30%;
+    background-image: url("img/num1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.num-2 {
+    background: rgb(94, 91, 91);
+    left: 50%;
+    background-image: url("img/num2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.num-3 {
+    background: rgb(94, 91, 91);
+    left: 70%;
+    background-image: url("img/num3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.order-box {
+    width: 15rem;
+    height: 0.25rem;
+    padding: 0;
+    margin: 0;
+    top: 18px;
+    position: absolute;
+    background: black;
+}
+
+.order-title {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+}
+
+.title-1 {
+    left: 29%;
+}
+
+.title-2 {
+    left: 46%;
+}
+
+.title-3 {
+    left: 69%;
+}
+
+@media screen and (max-width: 1267px) {
+    .order-box {
+        width: 12.2rem;
+        height: 0.25rem;
+        padding: 0;
+        margin: 0;
+        top: 18px;
+        position: absolute;
+        background: black;
+    }
+}
+
+@media screen and (max-width: 1019px) {
+    .order-box {
+        width: 20rem;
+        height: 0.25rem;
+        padding: 0;
+        margin: 0;
+        top: 18px;
+        position: absolute;
+        background: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .num-1 {
+        left: 5%;
+    }
+    .num-2 {
+        left: 50%;
+    }
+    .num-3 {
+        left: 89%;
+    }
+    .title-1 {
+        left: 3%;
+    }
+    .title-2 {
+        left: 38%;
+    }
+    .title-3 {
+        left: 86%;
+    }
+}
+
+
+/* footer */
+
+footer {
+    clear: none;
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+footer .container .row .col-lg-8 .col-md-4 h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+footer .container .row .col-lg-8 .col-md-4 p a {
+    color: white;
+}
+
+footer .container .row .col-lg-8 .col-md-4 p a:hover {
+    text-decoration: underline;
+}
+
+.footer-icons {
+    padding: 1rem 0 1rem 4rem;
+}
+
+.footer-icons .col-sm-3 {
+    width: 22%;
+}
+
+.footer-icons .col-sm-3 a {
+    color: white;
+    font-size: 2rem;
+}
+
+.footer-text {
+    font-size: 0.85rem;
+}

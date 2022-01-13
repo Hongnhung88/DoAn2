@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7b6df008-3f72-4d7c-999d-197b7250f22c": {
+      "ProjectGuid": "7b6df008-3f72-4d7c-999d-197b7250f22c",
+      "DisplayName": "WebGiay",
+      "ColorIndex": 0
+    },
+    "6729eb8e-ce81-4fd8-9197-91a58e1dc2b0": {
+      "ProjectGuid": "6729eb8e-ce81-4fd8-9197-91a58e1dc2b0",
+      "DisplayName": "Model",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,0 +1,12 @@
+D:\DoAn2\Model\bin\Debug\Model.dll.config
+D:\DoAn2\Model\bin\Debug\Model.dll
+D:\DoAn2\Model\bin\Debug\Model.pdb
+D:\DoAn2\Model\bin\Debug\EntityFramework.dll
+D:\DoAn2\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\DoAn2\Model\bin\Debug\EntityFramework.xml
+D:\DoAn2\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\DoAn2\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\DoAn2\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\DoAn2\Model\obj\Debug\Model.csproj.CopyComplete
+D:\DoAn2\Model\obj\Debug\Model.dll
+D:\DoAn2\Model\obj\Debug\Model.pdb
