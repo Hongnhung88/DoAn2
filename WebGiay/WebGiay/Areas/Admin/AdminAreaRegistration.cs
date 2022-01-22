@@ -115,6 +115,27 @@ namespace WebGiay.Areas.Admin
 
 
             context.MapRoute(
+               "CommentAD",
+               "danh-gia-binh-luan-ad",
+               new { action = "Index", controller = "CommentAdmin", id = UrlParameter.Optional }
+           );
+
+
+            context.MapRoute(
+               "DeleteCommentAD",
+               "xoa-danh-gia-binh-luan-ad/{id}",
+               new { action = "Delete", controller = "CommentAdmin", id = UrlParameter.Optional }
+           );
+
+
+            context.MapRoute(
+               "LogoutAD",
+               "dang-xuat-ad",
+               new { action = "Index", controller = "LoginAdmin", id = UrlParameter.Optional }
+           );
+
+
+            context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }

@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Quản lý bình luận - đánh giá";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@model PagedList.IPagedList<Model.EF.comment>
+@using PagedList;
+@using PagedList.Mvc;
+
+<div class="row grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <h3 class="card-title">Quản lý bình luận - đánh giá</h3>
+            </div>
+            <br />
+            <div class="table-responsive">
+                <table class="table ">
+                    <thead>
+                        <tr>
+                            <th>Email khách hàng</th>
+                            @*<th>Hình ảnh</th>*@
+                            <th>Đánh giá</th>
+                            <th>Nội dung</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.Feedback)
+                        {
+                            <tr id="row_@item.ID">
+                                <td>@item.User_Email</td>
+                                @*<td><img src="@item.Product_Image" style="border-radius:0px; width:125px;height:80px;" /></td>*@
+                                <td>@item.Star sao</td>
+                                <td>@item.Note</td>
+                                <td>
+                                    @Ajax.ActionLink(" Xoá", "Delete", new { @id = item.ID },
+                                                 new AjaxOptions
+                                                 {
+                                                     Confirm = "Bạn chắc chắn muốn xoá bản ghi này ?",
+                                                     OnComplete = "$('#row_" + @item.ID + "').remove()",
+                                                     HttpMethod = "Delete"
+                                                 },
+                                                 new { @class = "mdi mdi-delete btn btn-xs btn-danger" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- phân trang -->
+            <br>
+            <div class="d-flex align-items-center justify-content-between flex-column flex-sm-row mt-4">
+                <p class="mb-3 mb-sm-0">Trang @Model.PageNumber / @Model.PageCount</p>
+
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, @search = @ViewBag.Search }))
+            </div>
+        </div>
+    </div>
+</div>
