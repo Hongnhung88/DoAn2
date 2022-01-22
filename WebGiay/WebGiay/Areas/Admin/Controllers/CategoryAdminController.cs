@@ -86,7 +86,7 @@ namespace WebGiay.Areas.Admin.Controllers
         [HttpDelete]
         public ActionResult Delete(int id)
         {
-            var idpro = new WebGiayDbContext().products.Where(x => x.category_id == id);
+            var idpro = new DBWebGiayContent().products.Where(x => x.category_id == id);
             if (idpro == null)
             {
                 new CategoryDAO().Delete(id);

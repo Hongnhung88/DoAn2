@@ -98,7 +98,7 @@ namespace WebGiay.Areas.Admin.Controllers
         [HttpDelete]
         public ActionResult Delete(int id)
         {
-            var idorder = new WebGiayDbContext().order_details.Where(x => x.product_id == id);
+            var idorder = new DBWebGiayContent().order_details.Where(x => x.product_id == id);
             if (idorder == null)
             {
                 new ProductDAO().Delete(id);

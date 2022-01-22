@@ -10,11 +10,11 @@ namespace Model.DAO
 {
     public class CategoryDAO
     {
-        WebGiayDbContext db = null;
+        DBWebGiayContent db = null;
 
         public CategoryDAO()
         {
-            db = new WebGiayDbContext();
+            db = new DBWebGiayContent();
         }
 
 

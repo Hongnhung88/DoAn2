@@ -10,11 +10,11 @@ namespace Model.DAO
 {
     public class AdminDAO
     {
-        WebGiayDbContext db = null;
+        DBWebGiayContent db = null;
 
         public AdminDAO()
         {
-            db = new WebGiayDbContext();
+            db = new DBWebGiayContent();
         }
 
 

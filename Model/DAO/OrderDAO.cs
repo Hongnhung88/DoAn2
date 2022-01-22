@@ -10,11 +10,11 @@ namespace Model.DAO
 {
     public class OrderDAO
     {
-        WebGiayDbContext db = null;
+        DBWebGiayContent db = null;
 
         public OrderDAO()
         {
-            db = new WebGiayDbContext();
+            db = new DBWebGiayContent();
         }
 
 

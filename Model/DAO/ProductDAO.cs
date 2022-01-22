@@ -10,11 +10,11 @@ namespace Model.DAO
 {
     public class ProductDAO
     {
-        WebGiayDbContext db = null;
+        DBWebGiayContent db = null;
 
         public ProductDAO()
         {
-            db = new WebGiayDbContext();
+            db = new DBWebGiayContent();
         }
 
 
@@ -50,6 +50,10 @@ namespace Model.DAO
                 product.sale = entity.sale;
                 product.information = entity.information;
                 product.category_id = entity.category_id;
+                product.image1 = entity.image1;
+                product.image2 = entity.image2;
+                product.image3 = entity.image3;
+                product.image4 = entity.image4;
                 product.updated_at = DateTime.Now;
 
                 db.SaveChanges();

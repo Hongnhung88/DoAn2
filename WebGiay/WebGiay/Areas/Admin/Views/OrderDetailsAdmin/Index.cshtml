@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "Chi tiết đơn hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <h3 class="card-title">Chi tiết đơn hàng</h3>
+            </div>
+            <br /><br />
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <h4>Thông tin khách hàng:</h4>
+                        <table id="order-listing" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Họ tên</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Trạng thái đơn hàng</th>
+                                    <th>Trị giá đơn hàng</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Ngày mua</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in ViewBag.Order)
+                                {
+                                    <tr>
+                                        <td>@item.user_name</td>
+                                        <td>@item.user_phone</td>
+                                        @if (item.status == 1)
+                                        {
+                                            <td style="margin-top:5px">Đã xử lý</td>
+                                        }
+                                        else
+                                        {
+                                            <td style="margin-top:5px">Chưa xử lý</td>
+                                        }
+                                        <td>@item.amount.ToString("C")</td>
+                                        <td>@item.user_address</td>
+                                        <td>@item.created_at</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <h4>Các sản phẩm đặt mua:</h4>
+                        <table id="order-listing" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Mã HĐ</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Số lượng mua</th>
+                                    <th>Giá sản phẩm</th>
+                                    <th>Hình ảnh</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in ViewBag.Product)
+                                {
+                                    <tr>
+                                        <td>@item.OrderID</td>
+                                        <td>@item.ProductName</td>
+                                        <td>@item.Qty chiếc</td>
+                                        <td>@item.Price.ToString("C")</td>
+                                        @*<td><img src="@item.ProductImage" style="border-radius:0px; width:130px;height:85px;" /></td>*@
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <br /><hr />
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        @Html.ActionLink("Quay lại", "Index", "OrdersAdmin")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

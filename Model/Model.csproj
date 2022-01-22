@@ -63,18 +63,16 @@
     <Compile Include="DAO\AdminDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\CommentDAO.cs" />
-    <Compile Include="DAO\ImageDAO.cs" />
     <Compile Include="DAO\OrderDAO.cs" />
     <Compile Include="DAO\OrderDetailDAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="EF\admin.cs" />
     <Compile Include="EF\category.cs" />
     <Compile Include="EF\comment.cs" />
-    <Compile Include="EF\image.cs" />
+    <Compile Include="EF\DBWebGiayContent.cs" />
     <Compile Include="EF\order.cs" />
     <Compile Include="EF\order_details.cs" />
     <Compile Include="EF\product.cs" />
-    <Compile Include="EF\WebGiayDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

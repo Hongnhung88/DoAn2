@@ -9,11 +9,11 @@ namespace Model.DAO
 {
     public class OrderDetailDAO
     {
-        WebGiayDbContext db = null;
+        DBWebGiayContent db = null;
 
         public OrderDetailDAO()
         {
-            db = new WebGiayDbContext();
+            db = new DBWebGiayContent();
         }
 
 

@@ -129,9 +129,23 @@ namespace WebGiay.Areas.Admin
 
 
             context.MapRoute(
+               "OrderAD",
+               "don-hang-ad",
+               new { action = "Index", controller = "OrdersAdmin", id = UrlParameter.Optional }
+           );
+
+
+            context.MapRoute(
+               "OrdersDetailAD",
+               "chi-tiet-don-hang-ad/{id}",
+               new { action = "Index", controller = "OrderDetailsAdmin", id = UrlParameter.Optional }
+           );
+
+
+            context.MapRoute(
                "LogoutAD",
                "dang-xuat-ad",
-               new { action = "Index", controller = "LoginAdmin", id = UrlParameter.Optional }
+               new { action = "Index", controller = "Login", id = UrlParameter.Optional }
            );
 
 

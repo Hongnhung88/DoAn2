@@ -140,7 +140,8 @@
     <Compile Include="Areas\Admin\Controllers\CommentAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
-    <Compile Include="Areas\Admin\Controllers\OrderAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrderDetailsAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrdersAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductAdminController.cs" />
     <Compile Include="Areas\Admin\Data\CommentAdminModel.cs" />
     <Compile Include="Areas\Admin\Data\LoginAdminModel.cs" />
@@ -3867,6 +3868,8 @@
     <Content Include="Areas\Admin\Views\ProductAdmin\Create.cshtml" />
     <Content Include="Areas\Admin\Views\ProductAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\CommentAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\OrdersAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\OrderDetailsAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3897,7 +3900,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Views\OrderAdmin\" />
     <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>

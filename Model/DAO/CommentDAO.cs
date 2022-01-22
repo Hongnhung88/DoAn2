@@ -10,11 +10,11 @@ namespace Model.DAO
 {
     public class CommentDAO
     {
-        WebGiayDbContext db = null;
+        DBWebGiayContent db = null;
         
         public CommentDAO()
         {
-            db = new WebGiayDbContext();
+            db = new DBWebGiayContent();
         }
 
 

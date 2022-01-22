@@ -5,17 +5,16 @@ using System.Linq;
 
 namespace Model.EF
 {
-    public partial class WebGiayDbContext : DbContext
+    public partial class DBWebGiayContent : DbContext
     {
-        public WebGiayDbContext()
-            : base("name=WebGiayDbContext")
+        public DBWebGiayContent()
+            : base("name=DBWebGiayContent")
         {
         }
 
         public virtual DbSet<admin> admins { get; set; }
         public virtual DbSet<category> categories { get; set; }
         public virtual DbSet<comment> comments { get; set; }
-        public virtual DbSet<image> images { get; set; }
         public virtual DbSet<order_details> order_details { get; set; }
         public virtual DbSet<order> orders { get; set; }
         public virtual DbSet<product> products { get; set; }
@@ -51,11 +50,6 @@ namespace Model.EF
 
             modelBuilder.Entity<product>()
                 .HasMany(e => e.comments)
-                .WithOptional(e => e.product)
-                .HasForeignKey(e => e.product_id);
-
-            modelBuilder.Entity<product>()
-                .HasMany(e => e.images)
                 .WithOptional(e => e.product)
                 .HasForeignKey(e => e.product_id);
 
