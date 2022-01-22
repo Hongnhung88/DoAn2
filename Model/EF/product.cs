@@ -1,4 +1,4 @@
-namespace Model.EF
+﻿namespace Model.EF
 {
     using System;
     using System.Collections.Generic;
@@ -18,20 +18,37 @@ namespace Model.EF
 
         public int id { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập tên sản phẩm !")]
         [StringLength(255)]
+        [Display(Name = "Tên sản phẩm")]
         public string name { get; set; }
 
+
+        [Required(ErrorMessage = "Vuilongfg nhập giá của sản phẩm !")]
+        [Display(Name = "Giá sản phẩm")]
         public double? price { get; set; }
 
+
+        [Display(Name = "Sale sản phẩm")]
         public double? sale { get; set; }
 
+
         [Column(TypeName = "text")]
+        [Display(Name = "Thông tin sản phẩm")]
         public string information { get; set; }
 
+
+        [Display(Name = "Danh mục sản phẩm")]
         public int? category_id { get; set; }
 
+
+        [Column(TypeName = "date")]
+        [Display(Name = "Ngày tạo")]
         public DateTime? created_at { get; set; }
 
+
+        [Column(TypeName = "date")]
+        [Display(Name = "Ngày cập nhật")]
         public DateTime? updated_at { get; set; }
 
         public virtual category category { get; set; }

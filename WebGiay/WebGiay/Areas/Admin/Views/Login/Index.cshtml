@@ -1,0 +1,78 @@
+﻿
+
+@model WebGiay.Areas.Admin.Data.LoginAdminModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ADMIN SHOES</title>
+
+    <link rel="stylesheet" href="~/Assets/Admin/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/Assets/Admin/vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="~/Assets/Admin/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="~/Assets/Admin/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="~/Assets/Admin/css/style.css">
+    <link rel="stylesheet" href="~/Assets/Admin/css/fontsize.css">
+</head>
+
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper">
+            <div class="row">
+                <div class="content-wrapper full-page-wrapper d-flex align-items-center auth">
+                    <div class="row w-100">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="row login-top">
+                                <div class="col-lg-6 bg-white">
+                                    <div class="auth-form-light text-left p-5">
+                                        <h1 class="login-h1">ADMIN <span style="color: crimson;">SHOES</span></h1>
+                                        <h4 class="font-weight-light">Xin chào!!! Chúng ta hãy bắt đầu.</h4><br />
+                                        @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "pt-5" }))
+                                        {
+
+                                            @Html.ValidationSummary(true, " ", new { @class = "alert alert-danger" })
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Email</label>
+                                                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @autofocus = "autofocus" })
+                                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                                    <i class="mdi mdi-account"></i>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputPassword1">Mật khẩu</label>
+                                                    @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                                    <i class="mdi mdi-eye"></i>
+                                                </div>
+                                                <div class="mt-5">
+                                                    <button type="submit" class="btn btn-block btn-success btn-lg font-weight-medium">Đăng nhập</button>
+                                                </div>
+                                            </form>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 login-half-bg d-flex flex-row">
+                                    <p class="text-white font-weight-medium text-center flex-grow align-self-end">
+                                        ĐỒ ÁN KỲ II !!! <br /> SHOES © 2022...
+                                        <br>Sinh viên: ĐÀO HỒNG NHUNG
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Assets/Admin/js/off-canvas.js"></script>
+    <script src="~/Assets/Admin/js/hoverable-collapse.js"></script>
+    <script src="~/Assets/Admin/js/misc.js"></script>
+    <script src="~/Assets/Admin/js/settings.js"></script>
+    <script src="~/Assets/Admin/js/todolist.js"></script>
+</body>
+
+</html>

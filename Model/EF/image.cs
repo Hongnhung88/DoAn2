@@ -1,4 +1,4 @@
-namespace Model.EF
+﻿namespace Model.EF
 {
     using System;
     using System.Collections.Generic;
@@ -10,6 +10,7 @@ namespace Model.EF
     {
         public int id { get; set; }
 
+        [Display(Name = "Sản phẩm")]
         public int? product_id { get; set; }
 
         [StringLength(255)]
@@ -18,8 +19,13 @@ namespace Model.EF
         [StringLength(255)]
         public string url { get; set; }
 
+        [Column(TypeName = "date")]
+        [Display(Name = "Ngày tạo")]
         public DateTime? created_at { get; set; }
 
+
+        [Column(TypeName = "date")]
+        [Display(Name = "Ngày cập nhật")]
         public DateTime? updated_at { get; set; }
 
         public virtual product product { get; set; }

@@ -1,4 +1,4 @@
-namespace Model.EF
+﻿namespace Model.EF
 {
     using System;
     using System.Collections.Generic;
@@ -18,6 +18,8 @@ namespace Model.EF
 
         public int? qty { get; set; }
 
+        [Column(TypeName = "date")]
+        [Display(Name = "Ngày tạo")]
         public DateTime? created_at { get; set; }
 
         public virtual order order { get; set; }

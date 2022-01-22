@@ -1,16 +1,33 @@
-﻿using System;
+﻿using Model.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebGiay.Areas.Admin.Data;
 
 namespace WebGiay.Areas.Admin.Controllers
 {
-    public class HomeAdminController : Controller
+    public class HomeAdminController : BaseController
     {
         // GET: Admin/HomeAdmin
         public ActionResult Index()
         {
+            var listProduct = new ProductDAO().ListNewPro();
+            var listPro = new ProductDAO().ListOf();
+            ViewBag.Model = listPro.Count();
+
+            List<ProductAdminModel> listP = new List<ProductAdminModel>(); 
+            foreach (var item in listProduct)
+            {
+                var product = new ProductAdminModel();
+                product.Id = item.id;
+                product.Name = item.name;
+                product.Price = (double)item.price;
+                product.Image = item.images[0];
+
+            }
+
             return View();
         }
 

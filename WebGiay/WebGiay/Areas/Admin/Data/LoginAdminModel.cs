@@ -10,15 +10,10 @@ namespace WebGiay.Areas.Admin.Data
     {
         public int ID { get; set; }
 
-        public string DisplayName { get; set; }
-
         [Required(ErrorMessage = "Vui lòng nhập email của bạn !")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Vui lòng nhập mật khẩu của bạn !")]
         public string Password { get; set; }
-
-        [Required(ErrorMessage = "Vui lòng nhập lại mật khẩu của bạn !")]
-        public string RememberMe { get; set; }
     }
 }

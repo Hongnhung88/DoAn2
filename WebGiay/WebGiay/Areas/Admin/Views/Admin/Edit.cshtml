@@ -1,0 +1,73 @@
+﻿@model Model.EF.admin
+
+@{
+    ViewBag.Title = "Cập nhập thông tin Admin";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row user-profile">
+    <div class="col-lg-12 side-right stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <h3 class="card-title">Cập nhật thông tin tài khoản</h3>
+                </div>
+                <div class="wrapper d-block d-sm-flex align-items-center justify-content-between">
+                    <h4 class="card-title mb-0"></h4>
+                    <ul class="nav nav-tabs tab-solid tab-solid-primary mb-0" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-expanded="true">Thông tin</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrapper">
+                    <hr>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info">
+                            @using (Html.BeginForm("Edit", "Admin", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                @Html.HiddenFor(model => model.id)
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.password, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.password, new { htmlAttributes = new { @type = "password", @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <br />
+
+                                <div class="form-group mt-5">
+                                    <input type="submit" value="Cập nhật" class="btn btn-success mr-2" />
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div>
+                    @Html.ActionLink("<< Quay lại", "Index")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
