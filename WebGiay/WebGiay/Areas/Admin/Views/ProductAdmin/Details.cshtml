@@ -1,0 +1,109 @@
+﻿@model Model.EF.product
+
+@{
+    ViewBag.Title = "Thông tin chi tiết giày";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <h3 class="card-title">Thông tin chi tiết giày</h3>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table id="order-listing" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Tên giày</th>
+                                    @*<th>Hình ảnh</th>*@
+                                    <th>Giá</th>
+                                    <th>Ngày nhập</th>
+                                    <th>Ngày cập nhật</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Html.DisplayFor(model => model.name)</td>
+                                    @*<td><img src="@Html.DisplayFor(model => model.imagemain)" style="border-radius:0px; width:120px;height:60px;" /> </td>*@
+                                    <td>
+                                        <ul>
+                                            <li>Giá gốc: @Html.DisplayFor(model => model.price) đ</li>
+                                            @if (Model.sale != null)
+                                            {
+                                                <li>Giá sale:  @Html.DisplayFor(model => model.sale) đ</li>
+                                            }
+                                        </ul>
+                                    </td>
+                                    <td>@Html.DisplayFor(model => model.created_at)</td>
+
+                                    @if (Model.updated_at != null)
+                                    {
+                                        <td>@Html.DisplayFor(model => model.updated_at)</td>
+                                    }
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <br />
+            <div class="table-responsive">
+                <p style="font-size: 12pt;font-weight: bold;text-transform: uppercase;">Thông số kỹ thuật:</p>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr class="table-ghostwhite">
+                            <td>Hãng giày</td>
+                            <td>@Html.DisplayFor(model => model.category.name)</td>
+                        </tr>
+                        <tr class="table-lightgrey">
+                            <td class="align-text-top">Thông tin giày</td>
+                            <td>@Html.Raw(Model.information)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            @*@if (Model.imagechild1 == null && Model.imagechild2 == null && Model.imagechild3 == null)
+            {
+
+            }
+            else
+            {
+                <hr /><br />
+                <div class="row">
+                    <div class="col-12">
+                        <p style="font-size: 12pt;font-weight: bold;">Một số ảnh khác của xe:</p>
+                        @if (Model.imagechild1 != null)
+                        {
+                            <img src="@Html.DisplayFor(model => model.imagechild1)" style="width:170px; height:135px">
+                        }
+                        @if (Model.imagechild2 != null)
+                        {
+                            <img src="@Html.DisplayFor(model => model.imagechild2)" style="width:170px; height:135px">
+                        }
+                        @if (Model.imagechild3 != null)
+                        {
+                            <img src=" @Html.DisplayFor(model => model.imagechild3)" style="width:170px; height:135px">
+                        }
+
+                    </div>
+                </div>
+            }*@
+            <br /><br />
+            <div class="row">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>@Html.ActionLink("<< Quay lại", "Index")</td>
+                            <td class="text-right">@Html.ActionLink("Cập nhật sản phẩm", "Edit", new { id = Model.id }, new { @class = "btn btn-success mr-5" })</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

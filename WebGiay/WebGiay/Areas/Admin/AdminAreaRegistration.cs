@@ -57,6 +57,64 @@ namespace WebGiay.Areas.Admin
 
 
             context.MapRoute(
+               "CategoryAdmin",
+               "danh-muc-san-pham",
+               new { action = "Index", controller = "CategoryAdmin", id = UrlParameter.Optional }
+           );
+
+            context.MapRoute(
+                "CreateCategoryAdmin",
+                "them-moi-danh-muc-san-pham",
+                new { action = "Create", controller = "CategoryAdmin", id = UrlParameter.Optional }
+            );
+
+            context.MapRoute(
+                "EditCategoryAdmin",
+                "cap-nhat-danh-muc-san-pham/{id}",
+                new { action = "Edit", controller = "CategoryAdmin", id = UrlParameter.Optional }
+            );
+
+
+            context.MapRoute(
+                "DeleteCategoryAdmin",
+                "xoa-danh-muc-san-pham/{id}",
+                new { action = "Delete", controller = "CategoryAdmin", id = UrlParameter.Optional }
+            );
+
+
+            context.MapRoute(
+               "ProductAD",
+               "san-pham-ad",
+               new { action = "Index", controller = "ProductAdmin", id = UrlParameter.Optional }
+           );
+
+            context.MapRoute(
+                "ProductCreateAD",
+                "them-moi-san-pham-ad",
+                new { action = "Create", controller = "ProductAdmin", id = UrlParameter.Optional }
+            );
+
+            context.MapRoute(
+                "ProductDetailAD",
+                "chi-tiet-san-pham-ad/{id}",
+                new { action = "Details", controller = "ProductAdmin", id = UrlParameter.Optional }
+            );
+
+            context.MapRoute(
+                "ProductEditAD",
+                "cap-nhat-san-pham-ad/{id}",
+                new { action = "Edit", controller = "ProductAdmin", id = UrlParameter.Optional }
+            );
+
+
+            context.MapRoute(
+                "ProductDeleteAD",
+                "xoa-san-pham-ad/{id}",
+                new { action = "Delete", controller = "ProductAdmin", id = UrlParameter.Optional }
+            );
+
+
+            context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }

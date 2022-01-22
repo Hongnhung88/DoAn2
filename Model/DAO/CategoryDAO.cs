@@ -45,10 +45,7 @@ namespace Model.DAO
             {
                 var category = db.categories.Find(entity.id);
 
-                if(string.IsNullOrEmpty(entity.name))
-                {
-                    category.name = entity.name;
-                }
+                category.name = entity.name;
 
                 category.updated_at= DateTime.Now;
 
@@ -70,7 +67,8 @@ namespace Model.DAO
             {
                 var category = db.categories.Find(id);
 
-                db.categories.Remove(category);
+               db.categories.Remove(category);
+
                 db.SaveChanges();
 
                 return true;

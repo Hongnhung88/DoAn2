@@ -101,13 +101,17 @@ namespace Model.DAO
 
         public List<product> ListAll()
         {
-            return db.Database.SqlQuery<product>("Product_ListAll").ToList();
+            var list = db.Database.SqlQuery<product>("Product_ListAll").ToList();
+
+            return list;
         }
 
 
         public List<product> ListNewPro()
         {
-            return db.Database.SqlQuery<product>("Product_ListNew").ToList();
+            var list = db.Database.SqlQuery<product>("Product_ListNew").ToList();
+
+            return list;
         }
 
 
